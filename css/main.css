@@ -23,6 +23,20 @@ nav {
     background-color: #FFF;
     color: #000;
     text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+nav.scrolled {
+  box-shadow: 2px 2px 3px rgba(0,0,0,.25);
 }
 
 nav .left-nav {
