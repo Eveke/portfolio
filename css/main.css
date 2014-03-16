@@ -81,7 +81,7 @@ nav .brand {
 
 .button-inverse:hover {
     border-color: transparent;
-    color: transparent;
+    color: #000;
     background-color: #FFF;
     text-shadow: none;
 }
@@ -92,13 +92,24 @@ nav .brand {
     text-shadow: -5px -3px 1px rgba(0,0,0,.5); /* drop shadow */
     background-color: #000;
     text-align: center;
-    padding: 242px 30px 369px 30px;
+    padding: 242px 30px;
     text-transform: uppercase;
     position: relative;
     -webkit-transition: all .5s linear;
     -moz-transition: all .5s linear;
     -o-transition: all .5s linear;
     transition: all .5s linear;
+}
+
+#masthead.scrolled {
+  position: fixed;
+  width: 100%;
+  top: -657px;
+}
+
+#masthead.scrolled + #uiUx
+{
+  margin-top: 739px;
 }
 
 #masthead .contents {
