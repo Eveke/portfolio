@@ -37,6 +37,7 @@ nav {
 
 nav.scrolled {
   box-shadow: 2px 2px 3px rgba(0,0,0,.25);
+  z-index: 10;
 }
 
 nav .left-nav {
@@ -105,6 +106,7 @@ nav .brand {
   position: fixed;
   width: 100%;
   top: -657px;
+  z-index: 5;
 }
 
 #masthead.scrolled + #uiUx
@@ -185,6 +187,34 @@ nav .brand {
     margin: 36px auto;
 }
 
+#aboutMe {
+  background-color: #ffba00;
+  color: #FFF;
+}
+
+#aboutMe header {
+  margin-bottom: 90px;
+}
+
+#aboutMe header::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+#aboutMe .glasses-icon {
+  float: right;
+  text-align: right;
+}
+
+#aboutMe .glasses-icon .icon-glasses {
+  font-size: 26rem;
+  position: relative;
+  right: -35%;
+  color: #000;
+}
+
+
 .row {
   margin-bottom: 90px;
 }
@@ -239,12 +269,24 @@ article {
   display: inline-block;
 }
 
+[class*="col-"]
+{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .col-3 {
   width: 25%;
 }
 
 .col-4 {
   width: 33%;
+}
+
+.col-6 {
+  width: 50%;
 }
 
 .col-8 {
@@ -393,3 +435,38 @@ background-position: 100% 0%;
 }
 
 /*ul.solarsystem:hover li {-webkit-animation-play-state: paused;} */
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'kelsea';
+  src:url('../fonts/kelsea.eot?9abcf1');
+  src:url('../fonts/kelsea.eot?#iefix9abcf1') format('embedded-opentype'),
+    url('../fonts/kelsea.woff?9abcf1') format('woff'),
+    url('../fonts/kelsea.ttf?9abcf1') format('truetype'),
+    url('../fonts/kelsea.svg?9abcf1#kelsea') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'kelsea';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-glasses:before {
+  content: "\e600";
+}
