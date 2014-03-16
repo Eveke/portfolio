@@ -25,6 +25,14 @@ require(["jquery"], function($) {
           }
       });
 
+      $(document).on('focus','#contactMe input',function(e) {
+          $('#contactMe .background-image').addClass('focused');
+      });
+
+      $(document).on('blur','#contactMe input',function(e) {
+          $('#contactMe .background-image').removeClass('focused');
+      });
+
     });
 
 });
