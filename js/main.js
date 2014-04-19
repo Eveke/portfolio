@@ -5,8 +5,6 @@ require(["jquery"], function($) {
       $(window).on('scroll',function() {
           var height = $(window).scrollTop();
 
-          console.log("Height: "+height);
-
           if(height  > 0) {
               $('nav').addClass('scrolled');
 
@@ -31,6 +29,26 @@ require(["jquery"], function($) {
 
       $(document).on('blur','#contactMe .input',function(e) {
           $('#contactMe .background-image').removeClass('focused');
+      });
+
+      $(document).on('submit','#contactMe form',function(e){
+          e.preventDefault();
+          var $this = $(e.target);
+
+          $.ajax({
+              headers : {
+                 "X-Parse-Application-Id" : "T2u9K77ww0zPTmfTEB9mTk2TROLoaGSNEw4u8lqD",
+                 "X-Parse-REST-API-Key"   : "jLvRGi2vvEvrrR6orHP9zjLBMEC4U2V3NydbtzEu"
+              },
+              url: $this.attr('action'),
+              data: $this.serialize(),
+              dataType: 'json',
+              method: 'post',
+              success: function(data)
+              {
+                console.log(data);
+              }
+            });
       });
 
     });
