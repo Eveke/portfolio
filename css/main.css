@@ -225,6 +225,7 @@ nav .brand {
 #contactMe {
   color: #FFF;
   position: relative;
+  background-color: #000;
 }
 
 #contactMe .background-image {
@@ -233,8 +234,9 @@ nav .brand {
   bottom: 0;
   right: 0;
   left: 0;
-  background-image: url(../img/contact-bkg.png);
+  background-image: url(../img/contact-bkg.jpg);
   background-size: cover;
+  background-color: #000;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
@@ -259,25 +261,24 @@ nav .brand {
   font-size: 24px;
   font-size: 2.4rem;
   text-transform: uppercase;
-  text-align: right;
+  width: 25%;
+  vertical-align: top;
 }
 
 #contactMe .form-element {
   padding: 20px 0px 20px 30px;
   border-bottom: 1px solid #FFF;
   margin-bottom: 50px;
-  vertical-align: text-top;
 }
 
-#contactMe .form-group .form-element input {
+#contactMe .form-group .form-element .input {
   background: rgba(0, 0, 0, 0);
   border: none;
   width: 75%;
   box-sizing: border-box;
   height: 39px;
   margin-top: -1px;
-  font-family: "Noto Serif", serif;
-  text-transform: uppercase;
+  font-family: "Cabin", sans-serif;
   font-size: 24px;
   font-size: 2.4rem;
   margin: 0px 30px;
@@ -286,6 +287,16 @@ nav .brand {
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 
+}
+
+#contactMe .input:-webkit-autofill,
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill
+{
+  background-color: rgba(250, 255, 189, 0);
+  background-image: none;
+  color: #FFF;
 }
 
 #contactMe .form-group .form-element:last-child {
