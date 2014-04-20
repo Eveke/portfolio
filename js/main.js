@@ -35,51 +35,72 @@ require(["jquery"], function($) {
           e.preventDefault();
           var $this = $(e.target);
 
-          $.ajax({
-              headers : {
-                 "X-Parse-Application-Id" : "T2u9K77ww0zPTmfTEB9mTk2TROLoaGSNEw4u8lqD",
-                 "X-Parse-REST-API-Key"   : "jLvRGi2vvEvrrR6orHP9zjLBMEC4U2V3NydbtzEu"
-              },
-              url: $this.attr('action'),
-              data: $this.serialize(),
-              dataType: 'json',
-              method: 'post',
-              success: function(data)
-              {
-                $('#success').addClass('is-shown').delay(600).find('.message').fadeIn(1000);
-              },
-              error: function(jqXHR, textStatus, errorThrown)
-              {
-                $('#error').addClass('is-shown')
-                           .delay(600)
-                           .find('.message p')
-                           .html(jqXHR.responseJSON.error)
-                           .parent()
-                           .fadeIn(1000);
-              }
-            });
+          if (checkValidEmail($('#email').val()) && checkValidName($('#name').val()))
+          {
+            console.log('submitting form');
+            $.ajax({
+                headers : {
+                   "X-Parse-Application-Id" : "T2u9K77ww0zPTmfTEB9mTk2TROLoaGSNEw4u8lqD",
+                   "X-Parse-REST-API-Key"   : "jLvRGi2vvEvrrR6orHP9zjLBMEC4U2V3NydbtzEu"
+                },
+                url: $this.attr('action'),
+                data: $this.serialize(),
+                dataType: 'json',
+                method: 'post',
+                success: function(data)
+                {
+                  $('#success').addClass('is-shown').delay(600).find('.message').fadeIn(1000);
+                },
+                error: function(jqXHR, textStatus, errorThrown)
+                {
+                  $('#error').addClass('is-shown')
+                             .delay(600)
+                             .find('.message p')
+                             .html(jqXHR.responseJSON.error)
+                             .parent()
+                             .fadeIn(1000);
+                }
+              });
+          } else {
+            $this.addClass('shake animated');
+          }
       });
+
+      var checkValidName = function(val)
+      {
+        return val.match(/^[a-z0-9_-\s]{2,56}$/i);
+      }
+
+      var checkValidEmail = function(val)
+      {
+        return val.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
+      }
 
       $(document).on('blur', '#name', function(e){
         e.preventDefault();
         var $this = $(e.target);
         var $parent = $this.parent();
-        if ($this.val().match(/^[a-z0-9_-\s]{2,56}$/i))
+        if (checkValidName($this.val()))
           $parent.removeClass('error').addClass('success');
         else
-          $parent.removeClass('success').addClass('error');
+          $parent.removeClass('success').addClass('error shake animated');
       });
 
       $(document).on('blur', '#email', function(e){
         e.preventDefault();
         var $this = $(e.target);
         var $parent = $this.parent();
-        if ($this.val().match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i))
+        if (checkValidEmail($this.val()))
           $parent.removeClass('error').addClass('success');
         else
-          $parent.removeClass('success').addClass('error');
+          $parent.removeClass('success').addClass('error shake animated');
 
       });
+
+      $(document).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(e){
+        var $this = $(e.target);
+        $this.removeClass('animated shake');
+      })
 
       $(document).on('click','.form-message .close',function(e){
         e.preventDefault();

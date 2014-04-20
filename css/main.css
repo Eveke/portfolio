@@ -259,10 +259,9 @@ nav .brand {
 }
 
 #contactMe label {
-  font-family: "Noto Serif", serif;
+  font-family: "Cutive Mono", serif;
   font-size: 24px;
   font-size: 2.4rem;
-  text-transform: uppercase;
   width: 25%;
   vertical-align: top;
 }
@@ -279,10 +278,10 @@ nav .brand {
   border: none;
   width: 75%;
   box-sizing: border-box;
-  height: 35px;
+  height: 27px;
   font-family: "Cabin", sans-serif;
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 21px;
+  font-size: 2.1rem;
   margin: 0px 30px;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
@@ -670,9 +669,63 @@ background-position: 100% 0%;
   line-height: 1;
   right: 30px;
   color: #fff;
-  top: 28px;
+  top: 20px;
   display: none;
   position: absolute;
   font-size: 20px;
   font-size: 2rem;
+}
+
+
+
+
+/* Thanks animate.css.... will need to add to humans credits */
+
+.animated {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  30%, 60%, 80% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  40%, 50%, 70% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  30%, 60%, 80% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  40%, 50%, 70% {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
 }
