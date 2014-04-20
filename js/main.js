@@ -46,10 +46,15 @@ require(["jquery"], function($) {
               method: 'post',
               success: function(data)
               {
-                console.log(data);
+                $('#success').addClass('is-successful').delay(500).find('.message').fadeIn(1000);
               }
             });
       });
+
+      $(document).on('click','#success .close',function(e){
+        e.preventDefault();
+        $('#success').removeClass('is-successful');
+      })
 
     });
 
