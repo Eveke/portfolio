@@ -114,7 +114,7 @@ nav .brand {
   position: fixed;
   width: 100%;
   top: -657px;
-  z-index: 5;
+  z-index: 8;
 }
 
 #masthead.scrolled + #uiUx
@@ -227,6 +227,7 @@ nav .brand {
   color: #FFF;
   position: relative;
   background-color: #000;
+  overflow: hidden;
 }
 
 #contactMe .background-image {
@@ -270,6 +271,7 @@ nav .brand {
   padding: 20px 0px 20px 30px;
   border-bottom: 1px solid #FFF;
   margin-bottom: 50px;
+  position: relative;
 }
 
 #contactMe .form-group .form-element .input {
@@ -286,17 +288,17 @@ nav .brand {
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-#success {
+.form-message {
   position: absolute;
-  z-index: 9; /* one less than header */
+  z-index: 7; /* one less than header */
   width: 100%;
   height: 100%;
   margin-top: -90px; /* account for padding on articles */
-  margin-left: -100%;
-  background-color: rgb(36, 219, 172);
+
 
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
@@ -304,9 +306,19 @@ nav .brand {
   transition: all .5s ease-in-out;
 }
 
-#success .close {
+#success {
+  left: -100%;
+  background-color: rgb(36, 219, 172);
+}
+
+#error {
+  right: -100%;
+  background-color: rgb(219, 36, 109);
+}
+
+.form-message .close {
   position: absolute;
-  top: 20px;
+  top: 14px;
   right: 14px;
   color: #fff;
   z-index: 9;
@@ -315,7 +327,7 @@ nav .brand {
   font-size: 3.6rem;
 }
 
-#success .message {
+.form-message .message {
   width: 40%;
   margin: 15% auto;
   text-align: center;
@@ -325,13 +337,18 @@ nav .brand {
   padding: 40px 0px;
 }
 
-#success .message h1 {
+.form-message .message h1 {
   font-size: 8rem;
 }
 
-#success.is-successful
+#success.is-shown
 {
-  margin-left: 0px;
+  left: 0px;
+}
+
+#error.is-shown
+{
+  right: 0px;
 }
 
 #success p {
@@ -345,9 +362,10 @@ input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill
 {
-  background-color: rgba(250, 255, 189, 0);
-  background-image: none;
-  color: #FFF;
+  background-color: rgba(250, 255, 189, 0) !important;
+  background-image: none !important;
+  color: #FFF !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
 }
 
 #contactMe .form-group .form-element:last-child {
@@ -627,4 +645,34 @@ background-position: 100% 0%;
 }
 .icon-success:before {
 	content: "\e601";
+}
+
+
+.form-element.error::after {
+  content: "\e602";
+  display: inline-block;
+  color: rgb(219, 36, 109);
+}
+
+.form-element.success::after {
+  content: "\e601";
+  display: inline-block;
+  color: rgb(36, 219, 172);
+}
+
+.form-element::after {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  right: 30px;
+  color: #fff;
+  top: 28px;
+  display: none;
+  position: absolute;
+  font-size: 20px;
+  font-size: 2rem;
 }

@@ -98,11 +98,18 @@ title: kelsea.io
         </div><!-- contained -->
     </article>
     <article id="contactMe">
-        <div id="success">
+        <div id="success" class="form-message">
             <a href="#" class="close"><i class="icon-close"></i></a>
             <div class="message">
               <h1><i class="icon-success"></i></h1>
               <p>Thanks, I've received your message!</p>
+            </div>
+        </div>
+        <div id="error" class="form-message">
+            <a href="#" class="close"><i class="icon-close"></i></a>
+            <div class="message">
+              <h1><i class="icon-close"></i></h1>
+              <p>There was an error sending your message.</p>
             </div>
         </div>
         <div class="background-image"></div>
@@ -112,7 +119,7 @@ title: kelsea.io
             </header>
             <div class="row">
                 <div class="col-8 col-offset-2">
-                    <form action="https://api.parse.com/1/functions/hello" method="POST">
+                    <form autocomplete="off" action="https://api.parse.com/1/functions/hello" method="POST">
                         <div class="form-group">
                           <div class="form-element">
                             <label for="name">Name</label>
