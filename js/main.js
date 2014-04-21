@@ -10,6 +10,11 @@ require(["jquery"], function($) {
           $('#contactMe .background-image').removeClass('focused');
       });
 
+      $(document).on('click','#hamburgerButton',function(e){
+        e.preventDefault();
+        $('#hamdurger').toggleClass('is-shown');
+      });
+
       $(document).on('click','#workNav li > a',function(e){
           e.preventDefault();
           var $this = $(e.target);

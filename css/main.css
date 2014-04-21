@@ -111,6 +111,27 @@ nav .brand {
     transition: all .5s linear;
 }
 
+#hamdurger {
+  background-image: url(../img/hamburger.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: 7; /* one less than header */
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+#hamdurger.is-shown {
+  left: 0px;
+}
+
 #masthead.scrolled {
   position: fixed;
   width: 100%;
@@ -577,6 +598,12 @@ article {
 }
 
 
+#hamburgerButton {
+  margin-left: 23px;
+  font-size: 30px;
+  font-size: 3rem;
+}
+
 
 
 
@@ -713,6 +740,10 @@ background-position: 100% 0%;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hamburger:before {
+	content: "\e607";
 }
 
 .icon-glasses:before {
