@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <!-- build:css({app,.tmp}) /css/main.css -->
+    <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="/_bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- build:js(app) /js/head-scripts.js -->
+    <!-- Replace with a custom modernizer build for production -->
+    <script src="/_bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <section id="bio">
+      <div class="menu-button-wrapper">
+        <a href="#" id="menuButton"><img src="/img/hamburger.png"/></a>
+      </div>
+      <div class="picture-wrapper">
+        <img src="/img/profile.png"/>
+      </div>
+      <div class="bio">
+        <div class="container">
+          <header class="row">
+            <h1>Think. Design. Iterate.</h1>
+            <h2>Then do it all again.</h2>
+          </header>
+          <article class="row">
+            <p>My name is Kelsea I currently work for CrossFit HQ  as a UI/UX designer among other things. Working in house, I have had the chance to work on many different projects, from mobile apps to sports prgrams. My name is Kelsea I currently work for CrossFit HQ  as a UI/UX designer among other things. Working in house, I have had the chance to work on many different projects, from mobile apps to sports prgrams. My name is Kelsea I currently work for CrossFit HQ  as a UI/UX designer among other things. Working in house, I have had the chance to work on many different projects, from mobile apps to sports prgrams.</p>
+            <a class="btn btn-white">View Work</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="work">
+      <div class="work-type-selector">
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary active">
+            <input type="radio" name="options" id="web" checked> Web
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="mobile"> Mobile
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="print"> Print
+          </label>
+        </div>
+      </div>
+    </section>
+
+    {{ content }}
+
+    {% include scripts.html %}
+    {% include googleanalytics.html %}
+
+  </body>
+</html>
