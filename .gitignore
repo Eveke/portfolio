@@ -21,6 +21,7 @@ Thumbs.db
 *.swp
 ._*
 *~
+*.lock
 
 # Ignore packages #
 *.7z

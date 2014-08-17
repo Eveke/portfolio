@@ -19,16 +19,12 @@ title: kelsea.io
   </div>
   <div class="mockups">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-          {% for mockup in post.mockups %}
-          <div class="mockup row text-center">
-            <img src="{{mockup.image}}" alt='{{mockup.caption}}' title='{{mockup.caption}}'/>
-            <p>{{mockup.caption}}</p>
-          <div>
-          {% endfor %}
-        </div>
-      </div>
+      {% for mockup in post.mockups %}
+      <div class="mockup row text-center">
+        <img src="{{mockup.image}}" alt='{{mockup.caption}}' title='{{mockup.caption}}'/>
+        <p>{{mockup.caption}}</p>
+      <div>
+      {% endfor %}
     </div>
   </div>
 </article>
