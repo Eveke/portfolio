@@ -4,7 +4,7 @@
 # 3. config.yml
 
 name: kelsea
-description: 
+description:
 author:
   name: Zach Wentz
   email: zkwentz@gmail.com
@@ -20,7 +20,7 @@ future: true
 show_drafts: true
 
 # Markdown library
-markdown: maruku
+markdown: kramdown
 #   use_tex:    false
 #   use_divs:   false
 #   png_engine: blahtex

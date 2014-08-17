@@ -1,16 +1,35 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: kelsea.io
 ---
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-3 col-lg-3 col-md-offset-2 col-lg-offset-2">
-<section class="home posts">
-  <h1>Blog Posts</h1>
-  {% for post in site.posts %}
-    <article><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></article>
-  {% endfor %}
-</section>
-</div>
-</div>
-</div>
+
+
+{% for post in site.posts %}
+<article class="item {% if forloop.index0 == 0 %}active{% endif %}" data-category="{{post.category}}">
+  <div class="container info">
+    <header class="row text-center">
+      <h1>{{post.title}}</h1>
+    </header>
+    <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+      <p>{{post.content}}</p>
+      <div class="text-center">
+        <p><a class="link" href="http://{{post.link}}" target="_blank">{{post.link}}</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="mockups">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+          {% for mockup in post.mockups %}
+          <div class="mockup row text-center">
+            <img src="{{mockup.image}}" alt='{{mockup.caption}}' title='{{mockup.caption}}'/>
+            <p>{{mockup.caption}}</p>
+          <div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+{% endfor %}
