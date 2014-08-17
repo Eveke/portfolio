@@ -278,6 +278,13 @@ $bio-spacing: 26px;
     padding: $bio-spacing 0px;
     background-color: #000;
     width: 100%;
+    position: relative;
+
+    .back-to-top-wrapper {
+      position: absolute;
+      top: 35px;
+      right: 50px;
+    }
 
     .btn-group {
       border-radius: 0px;

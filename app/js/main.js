@@ -17,6 +17,11 @@
     $('body').css('margin-top',"-" +$('#bio').css('height')).addClass('is-showing-work');
   });
 
+  $(document).on('click','#backToTop',function(e){
+    e.preventDefault();
+    $('body').css('margin-top',"0px").removeClass('is-showing-work');
+  });
+
   $(document).on('click','.work-type-selector .btn',function(e) {
     e.preventDefault();
     var $this = $(this),
