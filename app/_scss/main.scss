@@ -106,8 +106,30 @@ html, body {
 }
 
 body {
-  transition: all 1s ease-out 0.25s;
+  transition: all .6s ease-out 0.25s;
+  overflow: hidden;
+  background-color: #000;
+
+  &.is-showing-work #bio{
+    opacity: 0;
+  }
 }
+
+
+  .menu-button-wrapper {
+    position: fixed;
+    left: 50px;
+    top: 38px;
+    min-height: 25px;
+    min-width: 35px;
+
+    a {
+      img {
+        width: 35px;
+        height: 25px;
+      }
+    }
+  }
 
 $bio-spacing: 26px;
 
@@ -118,6 +140,7 @@ $bio-spacing: 26px;
   min-height: 100%;
   max-height: 100%;
   position: relative;
+  transition: all .6s ease-out;
 
   &:before {
     content: '';
@@ -125,21 +148,6 @@ $bio-spacing: 26px;
     height: 100%;
     vertical-align: middle;
     margin-right: -0.25em;
-  }
-
-  .menu-button-wrapper {
-    position: absolute;
-    left: 50px;
-    top: 50px;
-    min-height: 25px;
-    min-width: 35px;
-
-    a {
-      img {
-        width: 35px;
-        height: 25px;
-      }
-    }
   }
 
   .picture-wrapper {
@@ -211,8 +219,9 @@ $bio-spacing: 26px;
 }
 
 #work {
-
+  overflow-y: scroll;
   height: 100%;
+  background-color: #FFF;
 
   .carousel-control.left, .carousel-control.right {
     top: 270px;
@@ -221,6 +230,7 @@ $bio-spacing: 26px;
   }
 
   .item {
+
     header h1 {
       @include font-size(24);
       color: #000;
@@ -229,6 +239,14 @@ $bio-spacing: 26px;
     .info {
       padding: 100px 0px;
       background-color: #FFF;
+      transition: 0.3s all ease-out;
+      position: relative;
+    }
+
+    &.active.left, &.next.left {
+      .info {
+        opacity: 0.5;
+      }
     }
 
     .mockups {

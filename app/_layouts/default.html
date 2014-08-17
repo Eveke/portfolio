@@ -28,9 +28,6 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <section id="bio">
-      <div class="menu-button-wrapper">
-        <a href="#" id="menuButton"><img src="/img/hamburger.png"/></a>
-      </div>
       <div class="picture-wrapper">
         <img src="/img/profile.png"/>
       </div>
@@ -42,7 +39,7 @@
           </header>
           <article class="row">
             <p>My name is Kelsea I currently work for CrossFit HQ  as a UI/UX designer among other things. Working in house, I have had the chance to work on many different projects, from mobile apps to sports prgrams. My name is Kelsea I currently work for CrossFit HQ  as a UI/UX designer among other things. Working in house, I have had the chance to work on many different projects, from mobile apps to sports prgrams. My name is Kelsea I currently work for CrossFit HQ  as a UI/UX designer among other things. Working in house, I have had the chance to work on many different projects, from mobile apps to sports prgrams.</p>
-            <a class="btn btn-white" id="viewWork" href="#">View Work</a>
+            <a class="btn btn-white" id="viewWork" href="#work">View Work</a>
           </article>
         </div>
       </div>
@@ -50,14 +47,14 @@
     <section id="work" class="carousel slide" data-ride="carousel">
       <div class="work-type-selector carousel-indeicators">
         <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary active">
-            <input type="radio" name="options" id="web" checked> Web
+          <label class="btn btn-primary active" id="web">
+            <input type="radio" name="options" checked> Web
           </label>
-          <label class="btn btn-primary">
-            <input type="radio" name="options" id="mobile"> Mobile
+          <label class="btn btn-primary" id="mobile">
+            <input type="radio" name="options"> Mobile
           </label>
-          <label class="btn btn-primary">
-            <input type="radio" name="options" id="print"> Print
+          <label class="btn btn-primary" id="print">
+            <input type="radio" name="options"> Print
           </label>
         </div>
       </div>
@@ -76,7 +73,9 @@
         </a>
       </div>
     </section>
-
+    <div class="menu-button-wrapper">
+      <a href="#" id="menuButton"><img src="/img/hamburger.png"/></a>
+    </div>
 
     {% include scripts.html %}
     {% include googleanalytics.html %}

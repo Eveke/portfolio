@@ -3,9 +3,9 @@ layout: default
 title: kelsea.io
 ---
 
-
-{% for post in site.posts %}
-<article class="item {% if forloop.index0 == 0 %}active{% endif %}" data-category="{{post.category}}">
+{% assign sorted_posts = (site.posts | sort: 'categories') %}
+{% for post in sorted_posts %}
+<article class="item {{post.category}} {% if forloop.index0 == 0 %}active{% endif %}" data-category="{{post.category}}">
   <div class="container info">
     <header class="row text-center">
       <h1>{{post.title}}</h1>
