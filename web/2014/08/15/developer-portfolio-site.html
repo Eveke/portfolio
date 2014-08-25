@@ -9,7 +9,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-    <link rel="stylesheet" href="/css/main.a348.css"/>
+    <link rel="stylesheet" href="/css/main.ac4e.css"/>
     <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
@@ -20,65 +20,99 @@
     <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="page-wrapper">
-      <section id="bio">
-        <div class="bio">
-          <div class="container">
-            <header class="row">
-              <h1>UI/UX Designer</h1>
-              <h2>Kelsea Everett</h2>
-            </header>
-            <article class="row">
-              <p>Born in Arizona, raised in Texas, currently in California working at CrossFit HQ.  As the lead in-house designer, I often play where many hats: wireframing work flows, mocking up user interfaces, developing brand identity, fixing printers, ect. I enjoy problem solving and see business constraints as an avenue for creativity, not a form of restriction. </p>
-              <a class="btn btn-white" id="viewWork" href="#work">View Work</a>
-            </article>
+    <section id="about">
+      <div class="close-wrapper">
+        <a href="#" id="closeBtn"><i class="glyphicon-remove glyphicon glyphicon-white"></i></a>
+      </div>
+      <div class="success-state">
+        <h1>Thanks!</h1>
+        <p>I will be in touch.</p>
+      </div>
+      <div class="contact-form">
+
+        <form action="https://api.parse.com/1/functions/hello" method="POST" class="horizontal-form">
+          <div class="form-group">
+            <div class="form-element">
+              <label for="name">Name</label>
+              <input name="name" id="name" type="text" class="input" placeholder="What should I call you?"/>
+            </div>
+            <div class="form-element">
+              <label for="email">Email</label>
+              <input name="email" id="email" type="text" class="input" placeholder="you@gmail.com"/>
+            </div>
+            <div class="form-element message-element">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" class="input"></textarea>
+            </div>
           </div>
-        </div>
-        <div class="menu-button-wrapper">
-          <a href="#" id="menuButton"><img src="/img/hamburger.18d5.png"/></a>
-        </div>
-      </section>
-    </div>
-      <section id="work" class="carousel slide">
-        <div class="work-type-selector">
+          <div class="text-center">
+              <button class="btn btn-white">Send Message</button>
+          </div>
+      </form>
+
+      </div>
+    </section>
+    <div class="pages-wrapper">
+      <div class="page-wrapper">
+        <section id="bio">
+          <div class="bio">
+            <div class="container">
+              <header class="row">
+                <h1>UI/UX Designer</h1>
+                <h2>Kelsea Everett</h2>
+              </header>
+              <article class="row">
+                <p>Born in Arizona, raised in Texas, currently in California working at CrossFit HQ.  As the lead in-house designer, I often play where many hats: wireframing work flows, mocking up user interfaces, developing brand identity, fixing printers, ect. I enjoy problem solving and see business constraints as an avenue for creativity, not a form of restriction. </p>
+                <a class="btn btn-black" id="viewWork" href="#work">View Work</a>
+              </article>
+            </div>
+          </div>
           <div class="menu-button-wrapper">
             <a href="#" id="menuButton"><img src="/img/hamburger.18d5.png"/></a>
           </div>
-          <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active" id="web">
-              <input type="radio" name="options" checked> Web
-            </label>
-            <label class="btn btn-primary" id="mobile">
-              <input type="radio" name="options"> Mobile
-            </label>
-            <label class="btn btn-primary" id="print">
-              <input type="radio" name="options"> Print
-            </label>
+        </section>
+      </div>
+        <section id="work" class="carousel slide">
+          <div class="work-type-selector">
+            <div class="menu-button-wrapper">
+              <a href="#" id="menuButton"><img src="/img/hamburger.18d5.png"/></a>
+            </div>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-primary active" id="web">
+                <input type="radio" name="options" checked> Web
+              </label>
+              <label class="btn btn-primary" id="mobile">
+                <input type="radio" name="options"> Mobile
+              </label>
+              <label class="btn btn-primary" id="print">
+                <input type="radio" name="options"> Print
+              </label>
+            </div>
+            <div class="back-to-top-wrapper">
+              <a href="#" id="backToTop"><img src="/img/uparrow.1fb9.png"/></a>
+            </div>
           </div>
-          <div class="back-to-top-wrapper">
-            <a href="#" id="backToTop"><img src="/img/uparrow.1fb9.png"/></a>
-          </div>
-        </div>
 
-        <article class="post">
+          <article class="post">
 <p><strong>Project Goals:</strong> As an online portfolio, the site contains a timeline of past work, contact info and a project spotlight. Meant to be consumed at a glance, the site is simple and straightforward with only a single landing page.</p>
 
 </article>
 
 
-          <!-- Controls -->
-          <a class="hidden-xs left carousel-control" href="#work" role="button" data-slide="prev">
-            <img src="/img/arrow-left.565d.png" alt="previous" title="previous"/>
-          </a>
-          <a class="hidden-xs right carousel-control" href="#work" role="button" data-slide="next">
-            <img src="/img/arrow-right.fd20.png" alt="next" title="next"/>
-          </a>
-        </div>
-      </section>
+            <!-- Controls -->
+            <a class="hidden-xs left carousel-control" href="#work" role="button" data-slide="prev">
+              <img src="/img/arrow-left.565d.png" alt="previous" title="previous"/>
+            </a>
+            <a class="hidden-xs right carousel-control" href="#work" role="button" data-slide="next">
+              <img src="/img/arrow-right.fd20.png" alt="next" title="next"/>
+            </a>
+          </div>
+        </section>
+      </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <script>window.jQuery || document.write('<script src="/_bower_components/jquery/jquery.js"><\/script>')</script>
-<script src="/js/script.64d2.js"></script>
+<script src="/js/script.be7f.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
