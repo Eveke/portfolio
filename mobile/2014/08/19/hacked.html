@@ -11,9 +11,12 @@
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-    <link rel="stylesheet" href="/css/main.f9af.css"/>
+    <link rel="stylesheet" href="/css/main.6883.css"/>
     <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+
+    <link rel="import" href="/_bower_components/paper-tabs/paper-tabs.html">
 
     <script src="/js/head-scripts.a52a.js"></script>
 
@@ -82,21 +85,19 @@
             <div class="menu-button-wrapper">
               <a href="#" id="menuButton"><i class="kels-hamburger"></i></a>
             </div>
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-primary active" id="web">
-                <input type="radio" name="options" checked> Web
-              </label>
-              <label class="btn btn-primary" id="mobile">
-                <input type="radio" name="options"> Mobile
-              </label>
-              <label class="btn btn-primary" id="print">
-                <input type="radio" name="options"> Print
-              </label>
+            <div class='btn-group'>
+              <paper-tabs selected="0" noink class="work-tabs" id="workTabs" valueattr="id" selected="web">
+                <paper-tab id="web">Web</paper-tab>
+                <paper-tab id="mobile">Mobile</paper-tab>
+                <paper-tab id="print">Print</paper-tab>
+              </paper-tabs>
             </div>
             <div class="back-to-top-wrapper">
               <a href="#" id="backToTop"><i class="kels-arrow-down"></i></a>
             </div>
           </div>
+
+
 
           <article class="post">
 <p>Catering to those who wish to operate in <em>read-only</em> mode, Hacked taps into the Hacker News API to display the top 30 posts. 
@@ -120,7 +121,7 @@ Although readers cannot comment, they can still share posts and save to Pocket. 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <script>window.jQuery || document.write('<script src="/_bower_components/jquery/jquery.js"><\/script>')</script>
-<script src="/js/script.ef11.js"></script>
+<script src="/js/script.a38d.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
